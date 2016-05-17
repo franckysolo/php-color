@@ -40,7 +40,7 @@ class Color {
 	const AQUA	    	= 0x00ffff;
 	const TEAL	    	= 0x008080;
 	const RED 	    	= 0xff0000;
-	const LIME		    = 0x00ff00;
+	const LIME		  	= 0x00ff00;
 	const GREEN 		= 0x008000;
 	const OLIVE 		= 0x808000;
 	const YELLOW 		= 0xffff00;
@@ -222,9 +222,11 @@ class Color {
 	 * @return Color
 	 */
 	public function setBlue($blue) {
+		
 		if ($this->_isValid($blue)) {
 			$this->blue = (int) $blue;
 		}
+		
 		return $this;
 	}
 
