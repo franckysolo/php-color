@@ -1,5 +1,6 @@
 {
 	"name" : "franckysolo/php-color",
+	"version": "0.1.0",
 	"description" : "PHP color class",
 	"type" : "PHP class",
 	"license" : "MIT",

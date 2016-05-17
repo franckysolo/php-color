@@ -2,7 +2,7 @@
 /**
 * Color -  17 mai 2016
 *
-* @version     2.0
+* @version     0.1.0
 * @author      franckysolo (http://franckysolo-productions.com/)
 * @link        http://github.com/franckysolo/php-color for the canonical source repository
 * @copyright   Copyright (c) 2008-2016 franckysolo-productions (http://franckysolo-productions.com/)
