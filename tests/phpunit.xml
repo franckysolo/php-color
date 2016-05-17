@@ -1,0 +1,27 @@
+<phpunit bootstrap="../vendor/autoload.php" 
+	colors="true" 
+	stopOnError="true"
+	stopOnFailure="true" 
+	stopOnIncomplete="true" 
+	stopOnSkipped="true"
+	convertErrorsToExceptions="true" 
+	convertNoticesToExceptions="true"
+	convertWarningsToExceptions="true">
+
+	<testsuite name="Drawing Test Suite">
+		<directory>./</directory>
+	</testsuite>
+
+	<filter>
+		<whitelist>
+			<directory suffix=".php">../src</directory>
+			
+		</whitelist>
+	</filter>
+
+	<logging>
+		<log type="coverage-html" target="./logs/report" charset="UTF-8"
+			yui="true" lowUpperBound="50" highLowerBound="80" />
+		<log type="testdox-html" target="./logs/report/testdox.html" />
+	</logging>
+</phpunit>

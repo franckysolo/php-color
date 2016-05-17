@@ -1,0 +1,17 @@
+{
+	"name" : "franckysolo/php-color",
+	"description" : "PHP color class",
+	"type" : "PHP class",
+	"license" : "MIT",
+	"authors" : [{
+			"name" : "franckysolo",
+			"email" : "franckysolo@gmail.com"
+		}
+	],
+	"autoload" : {
+		"psr-4" : {
+			"PhpColor\\" : "src/PhpColor"
+		}
+	},
+	"minimum-stability" : "dev"
+}

@@ -1,2 +1,2 @@
-# php-colors
+# php-color
 Rgba color php implementation
