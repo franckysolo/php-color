@@ -1,6 +1,5 @@
 {
 	"name" : "franckysolo/php-color",
-	"version": "0.1.0",
 	"description" : "PHP color class",
 	"type" : "PHP class",
 	"license" : "MIT",
@@ -14,5 +13,10 @@
 			"PhpColor\\" : "src/PhpColor"
 		}
 	},
+	"extra": {
+        "branch-alias": {
+            "dev-master": "0.1.0"
+        }
+    }
 	"minimum-stability" : "dev"
 }
