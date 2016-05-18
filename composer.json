@@ -5,13 +5,15 @@
 	"license" : "MIT",
 	"authors" : [{
 			"name" : "franckysolo",
-			"email" : "franckysolo@gmail.com"
+			"email" : "franckysolo@gmail.com",
+			"homepage" : "http://franckysolo-productions.com",
+			"role" : "Developer"
 		}
 	],
 	"minimum-stability" : "dev",
-	"require": {
-        "php": ">=5.5.9"
-    },
+	"require" : {
+		"php" : ">=5.5.9"
+	},
 	"autoload" : {
 		"psr-4" : {
 			"PhpColor\\" : "src/PhpColor"
@@ -21,8 +23,5 @@
 		"branch-alias" : {
 			"dev-master" : "0.1.0-dev"
 		}
-	},
-	"scripts": {
-        "test": "cd tests/ && phpunit"
-    }	
+	}
 }
