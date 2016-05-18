@@ -103,7 +103,7 @@ class Color {
 		} else if (4 === $count) {  // rgba
 			list($a, $r, $g, $b) = array_map('hexdec', $split);
 		} else {
-			throw new InvalidArgumentException('Hexadecimal color is not correct');
+			throw new InvalidArgumentException('Hexadecimal color is not supported');
 		}
 
 		return new static($r, $g, $b, $a);
