@@ -6,9 +6,7 @@ $blue = Color::fromInt(Color::BLUE);
 $red = Color::fromInt(Color::RED);
 $orange = Color::fromInt(Color::ORANGE);
 $yellow = Color::fromInt(Color::YELLOW);
-
 $alphaGreen = Color::fromArray([120,0,255,0]);
-// @todo test the to hex method and report it to bg color
 $opaqueGreen = $alphaGreen->toHex(true);
 ?>
 <!doctype html>

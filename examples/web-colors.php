@@ -3,11 +3,11 @@ require_once __DIR__ . '/../vendor/autoload.php';
 use PhpColor\Color;
 // the web safe colors
 $colors = [];
-for ($r = 0; $r <= 15; $r += 3) {
-	for ($g = 0; $g <= 15; $g += 3) {
-		for ($b = 0; $b <= 15; $b += 3) {
+for ($r = 0; $r <= 17; $r += 3) {
+	for ($g = 0; $g <= 17; $g += 3) {
+		for ($b = 0; $b <= 17; $b += 3) {
 			$array = [dechex($r), dechex($r), dechex($g), dechex($g), dechex($b), dechex($b)];
-			$string = vsprintf('#%d%d%d%d%d%d', $array);
+			$string = join('', $array);
 			$color = Color::fromHex($string);
 			if (! in_array($color, $colors)) {
 				array_push($colors, $color);
@@ -15,13 +15,14 @@ for ($r = 0; $r <= 15; $r += 3) {
 		}
 	}
 }
+$count = count($colors);
 ?>
 <!doctype html>
 <html>
 <head>
 <style type="text/css">
 .color {
-	color:white;
+	color:#fff;
 	width:150px;
 	height:150px;
 	line-height: 150px;
@@ -38,9 +39,9 @@ small {
 </style>
 </head>
 <body>
-<h1>Web safe colors with PhpColor</h1>
+<h1>Web safe <?php echo $count;?> colors with <a href="https://github.com/franckysolo/php-color">PhpColor</a></h1>
 <?php foreach ($colors as $k => $color):?>
-<div class="color" style="background-color:<?php echo $color->toHex(true)?>;">
+<div class="color" style="background-color:<?php echo $color->toHex(true)?>;<?php if ($k > 132):?>color:black;<?php endif;?>">
 <small>
 <?php echo $color->toHex(true)?><br>
 <?php echo $color;?><br>
