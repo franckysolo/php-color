@@ -1,13 +1,17 @@
 {
 	"name" : "franckysolo/php-color",
 	"description" : "PHP color class",
-	"type" : "PHP class",
+	"type" : "php-class",
 	"license" : "MIT",
 	"authors" : [{
 			"name" : "franckysolo",
 			"email" : "franckysolo@gmail.com"
 		}
 	],
+	"minimum-stability" : "dev",
+	"require": {
+        "php": ">=5.5.9"
+    },
 	"autoload" : {
 		"psr-4" : {
 			"PhpColor\\" : "src/PhpColor"
@@ -15,11 +19,10 @@
 	},
 	"extra" : {
 		"branch-alias" : {
-			"dev-master" : "0.1.0"
+			"dev-master" : "0.1.0-dev"
 		}
 	},
 	"scripts": {
         "test": "cd tests/ && phpunit"
-    },
-	"minimum-stability" : "dev"
+    }	
 }
