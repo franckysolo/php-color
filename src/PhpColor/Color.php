@@ -13,7 +13,7 @@ use InvalidArgumentException;
 
 /**
  * The RGBA color class for gd, canvas, svg, css
- * From Good 1.0
+ * From Good 1.0 will be package of php-draw
  * 
  * @author franckysolo
  * @package Drawing
@@ -117,7 +117,9 @@ class Color {
 	 * @return Color
 	 */
 	public static function fromArray(array $color = []) {
+		
 		$count = count($color);
+		
 		if (3 === $count) { // rgb
 			list($r, $g, $b) = $color;
 			$a = 0;
@@ -318,11 +320,11 @@ class Color {
 		
 		$pattern = $this->format;
 		$array = $this->toArray();
-		// remove alpha channel
-		array_shift($array);
-		$pattern = substr($pattern, 4);
-			
+		
+		// remove alpha channel			
 		if ($prefix) {
+			array_shift($array);
+			$pattern = substr($pattern, 4);
 			$pattern = '#' . $pattern;
 		}
 			

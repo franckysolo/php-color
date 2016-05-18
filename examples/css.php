@@ -6,9 +6,10 @@ $blue = Color::fromInt(Color::BLUE);
 $red = Color::fromInt(Color::RED);
 $orange = Color::fromInt(Color::ORANGE);
 $yellow = Color::fromInt(Color::YELLOW);
-$lightGreen = Color::fromArray([100,0,255,0]);
+
+$alphaGreen = Color::fromArray([120,0,255,0]);
 // @todo test the to hex method and report it to bg color
-$hexGreen = $lightGreen->toHex(true);
+$opaqueGreen = $alphaGreen->toHex(true);
 ?>
 <!doctype html>
 <html>
@@ -34,11 +35,11 @@ background-color : <?php echo $orange?>;
 .yellow {
 background-color : <?php echo $yellow?>;
 }
-.light-green {
-background-color : <?php echo $lightGreen?>;
+.green-alpha {
+background-color : <?php echo $alphaGreen // alpha avaliable with __toString() method?>;
 }
-.alpha-green {
-background-color : <?php echo $hexGreen?>;
+.green-opaque {
+background-color : <?php echo $opaqueGreen // alpha disable with toHex method ?>;
 }
 </style>
 </head>
@@ -48,7 +49,7 @@ background-color : <?php echo $hexGreen?>;
 <div class="blue"></div>
 <div class="orange"></div>
 <div class="yellow"></div>
-<div class="light-green"></div>
-<div class="alpha-green"></div>
+<div class="green-alpha"></div>
+<div class="green-opaque"></div>
 </body>
 </html>
