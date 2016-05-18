@@ -1,27 +1,29 @@
 <?php
+namespace Tests;
+
 use PhpColor\Color;
 
-class ColorTest extends PHPUnit_Framework_TestCase
+class ColorTest extends \PHPUnit_Framework_TestCase
 {
 		
 	public function testStaticMethodFromHex() {
 		
 		$color = Color::fromHex('#ffffff');		
-		$this->assertInstanceOf('Drawing\Color', $color);		
+		$this->assertInstanceOf('PhpColor\Color', $color);		
 		$this->assertEquals(255, $color->getRed());
 		$this->assertEquals(255, $color->getGreen());
 		$this->assertEquals(255, $color->getBlue());
 		$this->assertEquals(0, $color->getAlpha());	
 		
 		$color = Color::fromHex('#cccccc');
-		$this->assertInstanceOf('Drawing\Color', $color);
+		$this->assertInstanceOf('PhpColor\Color', $color);
 		$this->assertEquals(204, $color->getRed());
 		$this->assertEquals(204, $color->getGreen());
 		$this->assertEquals(204, $color->getBlue());
 		$this->assertEquals(0, $color->getAlpha());
 		
 		$color = Color::fromHex('#7fffffff');
-		$this->assertInstanceOf('Drawing\Color', $color);
+		$this->assertInstanceOf('PhpColor\Color', $color);
 		$this->assertEquals(255, $color->getRed());
 		$this->assertEquals(255, $color->getGreen());
 		$this->assertEquals(255, $color->getBlue());
@@ -30,7 +32,7 @@ class ColorTest extends PHPUnit_Framework_TestCase
 	
 	/**
 	 * @expectedException InvalidArgumentException
-	 * @expectedExceptionMessage Hexadecimal color is not correct
+	 * @expectedExceptionMessage Hexadecimal color is not supported
 	 */
 	public function testStaticMethodFromHexWithWrongParams() {
 		$color = Color::fromHex('#ddd');
@@ -39,36 +41,36 @@ class ColorTest extends PHPUnit_Framework_TestCase
 	public function testStaticMethodFromArray() {
 		
 		$color = Color::fromArray([255, 255, 255]);
-		$this->assertInstanceOf('Drawing\Color', $color);
+		$this->assertInstanceOf('PhpColor\Color', $color);
 		$this->assertEquals(255, $color->getRed());
 		$this->assertEquals(255, $color->getGreen());
 		$this->assertEquals(255, $color->getBlue());
 		$this->assertEquals(0, $color->getAlpha());
 		
-		$this->assertEquals('ffffff', $color->toHex());
+		$this->assertEquals('00ffffff', $color->toHex());
 		$this->assertEquals('#ffffff', $color->toHex(true));
 		$this->assertEquals(0xffffff, $color->toInt());
 		
 		$color = Color::fromArray([204, 204, 204]);
-		$this->assertInstanceOf('Drawing\Color', $color);
+		$this->assertInstanceOf('PhpColor\Color', $color);
 		$this->assertEquals(204, $color->getRed());
 		$this->assertEquals(204, $color->getGreen());
 		$this->assertEquals(204, $color->getBlue());
 		$this->assertEquals(0, $color->getAlpha());
 		
-		$this->assertEquals('cccccc', $color->toHex());
+		$this->assertEquals('00cccccc', $color->toHex());
 		$this->assertEquals('#cccccc', $color->toHex(true));
 		$this->assertEquals(0xcccccc, $color->toInt());
 		
 		$color = Color::fromArray([127, 255, 255, 255]);
-		$this->assertInstanceOf('Drawing\Color', $color);
+		$this->assertInstanceOf('PhpColor\Color', $color);
 		$this->assertEquals(255, $color->getRed());
 		$this->assertEquals(255, $color->getGreen());
 		$this->assertEquals(255, $color->getBlue());
 		$this->assertEquals(127, $color->getAlpha());
 		
 		$this->assertEquals('7fffffff', $color->toHex());
-		$this->assertEquals('#7fffffff', $color->toHex(true));
+		$this->assertEquals('#ffffff', $color->toHex(true));
 		$this->assertEquals(0x7fffffff, $color->toInt());
 	}
 	
@@ -84,19 +86,19 @@ class ColorTest extends PHPUnit_Framework_TestCase
 		
 		// white
 		$color = Color::fromInt(0xffffff);
-		$this->assertInstanceOf('Drawing\Color', $color);
+		$this->assertInstanceOf('PhpColor\Color', $color);
 		$this->assertEquals(255, $color->getRed());
 		$this->assertEquals(255, $color->getGreen());
 		$this->assertEquals(255, $color->getBlue());
 		$this->assertEquals(0, $color->getAlpha());
 		
-		$this->assertEquals('ffffff', $color->toHex());
+		$this->assertEquals('00ffffff', $color->toHex());
 		$this->assertEquals('#ffffff', $color->toHex(true));
 		$this->assertCount(4, $color->toArray());
 		
 		// transparent
 		$color = Color::fromInt(0x7fffffff);
-		$this->assertInstanceOf('Drawing\Color', $color);
+		$this->assertInstanceOf('PhpColor\Color', $color);
 		$this->assertEquals(255, $color->getRed());
 		$this->assertEquals(255, $color->getGreen());
 		$this->assertEquals(255, $color->getBlue());
@@ -152,7 +154,7 @@ class ColorTest extends PHPUnit_Framework_TestCase
 		
 		$color = new Color();
 		
-		$this->assertInstanceOf('Drawing\Color', $color);
+		$this->assertInstanceOf('PhpColor\Color', $color);
 		$this->assertEquals(0, $color->getRed());
 		$this->assertEquals(0, $color->getGreen());
 		$this->assertEquals(0, $color->getBlue());

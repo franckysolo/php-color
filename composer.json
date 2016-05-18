@@ -13,10 +13,13 @@
 			"PhpColor\\" : "src/PhpColor"
 		}
 	},
-	"extra": {
-        "branch-alias": {
-            "dev-master": "0.1.0"
-        }
-    }
+	"extra" : {
+		"branch-alias" : {
+			"dev-master" : "0.1.0"
+		}
+	},
+	"scripts": {
+        "test": "cd tests/ && phpunit"
+    },
 	"minimum-stability" : "dev"
 }
