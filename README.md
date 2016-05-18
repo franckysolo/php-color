@@ -1,3 +1,3 @@
 # php-color
-Rgba color php implementation
-Men at work!
+Rgba color php implementation  
+Doc comming soon!
