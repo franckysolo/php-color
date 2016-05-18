@@ -315,14 +315,13 @@ class Color {
 	 * @return string
 	 */
 	public function toHex($prefix = false) {
+		
 		$pattern = $this->format;
-
 		$array = $this->toArray();
-		if (0 === $this->alpha) {
-			array_shift($array);
-			$pattern = substr($pattern, 4);
-		}
-
+		// remove alpha channel
+		array_shift($array);
+		$pattern = substr($pattern, 4);
+			
 		if ($prefix) {
 			$pattern = '#' . $pattern;
 		}
@@ -338,6 +337,7 @@ class Color {
 	public function __toString() {
 
 		list($a, $r, $g, $b) = $this->toArray();
+		
 		if ($a > 0) {
 			return sprintf('rgba(%d,%d,%d,%s)', $r, $g, $b,  1 - round($a / 127, 1));
 		}

@@ -7,6 +7,8 @@ $red = Color::fromInt(Color::RED);
 $orange = Color::fromInt(Color::ORANGE);
 $yellow = Color::fromInt(Color::YELLOW);
 $lightGreen = Color::fromArray([100,0,255,0]);
+// @todo test the to hex method and report it to bg color
+$hexGreen = $lightGreen->toHex(true);
 ?>
 <!doctype html>
 <html>
@@ -35,6 +37,9 @@ background-color : <?php echo $yellow?>;
 .light-green {
 background-color : <?php echo $lightGreen?>;
 }
+.alpha-green {
+background-color : <?php echo $hexGreen?>;
+}
 </style>
 </head>
 <body>
@@ -44,5 +49,6 @@ background-color : <?php echo $lightGreen?>;
 <div class="orange"></div>
 <div class="yellow"></div>
 <div class="light-green"></div>
+<div class="alpha-green"></div>
 </body>
 </html>

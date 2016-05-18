@@ -101,7 +101,7 @@ class ColorTest extends PHPUnit_Framework_TestCase
 		$this->assertEquals(255, $color->getGreen());
 		$this->assertEquals(255, $color->getBlue());
 		$this->assertEquals(127, $color->getAlpha());
-		$this->assertEquals('#7fffffff', $color->toHex(true));
+		$this->assertEquals('#ffffff', $color->toHex(true));
 		$this->assertCount(4, $color->toArray());		
 	}
 		
