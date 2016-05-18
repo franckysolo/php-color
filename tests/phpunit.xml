@@ -8,7 +8,7 @@
 	convertNoticesToExceptions="true"
 	convertWarningsToExceptions="true">
 
-	<testsuite name="Drawing Test Suite">
+	<testsuite name="Color Test Suite">
 		<directory>./</directory>
 	</testsuite>
 
