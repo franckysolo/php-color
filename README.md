@@ -166,7 +166,7 @@ background-color : <?php echo $opaqueGreen // alpha disable with toHex method ?>
 </html>
 ```
 
-Look at the examples directory for more example.
+Look at the examples directory for more examples.
 
 ## License
 
