@@ -1,4 +1,7 @@
 # php-color
+[![License MIT](https://img.shields.io/badge/License-MIT-blue.svg?style=flat)](https://tldrlegal.com/license/mit-license)
+[![Packagist](https://img.shields.io/badge/packagist-download-green.svg)](http://packagist.org/packages/franckysolo/php-color)  
+
 The RGBA color PHP class implementation for Gd, Canvas, Svg, CSS  
 From Good 1.0 will be package of php-draw
 ## Installation via composer
